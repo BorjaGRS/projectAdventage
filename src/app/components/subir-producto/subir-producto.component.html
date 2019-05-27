@@ -1,0 +1,53 @@
+<div class="row">
+  <a name="arriba"></a>
+  <div class="col-md-3"></div>
+  <div class="col-md-6 alta">
+<form #productoForm="ngForm" (ngSubmit)="addProducto(productoForm)">
+  <fieldset>
+  <legend><h3>SUBIR PRODUCTO</h3></legend>
+  <div class="form-group mt-4">
+    <label for="imagen"></label>
+    <input class="form-control-file" type="file"  id="imagen" accept="image/*" name="imagen"  #imagen="ngModel" [(ngModel)]="productoService.guardarProducto.imagen"/>
+  </div>
+  <div class="form-group">
+      <label for="tipo" class="mt-3"></label>
+      <select class="form-control" id="tipo" name="tipo" #tipo="ngModel" [(ngModel)]="productoService.guardarProducto.tipo">
+          <option value="" disabled>Tipo de Producto:</option>
+          <option value="motocicleta">Motocicleta</option>
+          <option value="coche">Coche</option>
+          <option value="tv">Tv y Audio</option>
+          <option value="moda">Moda y Accesorio</option>
+          <option value="consola">Consolas y Videojuego</option>
+          <option value="bicicleta">Bicicleta</option>
+          <option value="informatica">Informatica y Electronica</option>
+          <option value="moviles">Moviles y Telefonia</option>
+          <option value="otro">otro</option>
+        </select>
+    </div>
+  <div class="form-group">
+    <label for="nombre" class="mt-3"></label>
+    <input class="form-control" type="text"  id="nombre" name="nombre"  placeholder="Nombre producto" #nombre="ngModel" [(ngModel)]="productoService.guardarProducto.nombre"/>
+  </div>
+  <div class="form-group">
+    <label for="precio" class="mt-3"></label>
+    <input class="form-control" type="text"  id="precio" name="precio"  placeholder="Precio producto Euros" #precio="ngModel" [(ngModel)]="productoService.guardarProducto.precio"/>
+  </div>
+  <div class="form-group">
+    <label for="antiguo" class="mt-3"></label>
+    <select class="form-control" id="antiguedad" name="antiguedad" #antiguedad="ngModel" [(ngModel)]="productoService.guardarProducto.antiguedad">
+      <option value="" disabled>Elige antiguedad:</option>
+      <option>-1 año</option>
+      <option>-2 años</option>
+      <option>-5 años</option>
+      <option>otro</option>
+    </select>
+  </div>
+  <div class="form-group">
+  <textarea name="descripcion" rows="5" cols="60" #descripcion="ngModel" [(ngModel)]="productoService.guardarProducto.descripcion">Descripcion del producto....</textarea>
+</div>
+<div class="col-md-3"></div>
+<button type="submit" class="btn btn-danger mt-4" onclick="location.href='/'">Confirmar</button>
+</fieldset>
+</form>
+</div>
+</div>

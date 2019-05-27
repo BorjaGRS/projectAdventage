@@ -1,0 +1,19 @@
+.container{
+    margin-top: 40px;
+    height: 630px;
+    overflow-y: scroll;
+
+}
+.containerFicha{
+    margin-top: 40px;
+    height: 630px;
+
+}
+.card{
+    cursor: pointer;
+
+}
+.card-img-top{
+    height: 140px;
+    
+}

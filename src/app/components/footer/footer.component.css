@@ -1,0 +1,16 @@
+.row{
+    margin: 0;
+}
+.foot{
+
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position:fixed;
+}
+.enlaceSocial{
+    color: white;
+}
+.enlaceSocial:hover{
+    color: red;
+}

@@ -1,0 +1,18 @@
+.btn{
+margin-left: 45%;
+width: 100px;
+}
+legend{
+    text-align: center;
+}
+.row{
+    margin: 0;
+}
+.alta{
+    margin-top: 50px;
+    height: 630px;
+}
+.label{
+    display: flex;
+    margin: 0;
+}

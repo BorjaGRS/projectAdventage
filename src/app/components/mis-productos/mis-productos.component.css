@@ -1,0 +1,40 @@
+.row{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin-top: 40px;
+    height: 630px;
+    overflow-y:scroll;
+}
+.cajaProducto{
+  width: 100%;
+  height: 10rem;
+  border: solid 1px black;
+  padding: 0;
+  margin-left: 8rem;
+  margin-top: 1rem;
+  display: flex;
+  cursor: pointer;
+}
+.img{
+    width: 10rem;
+    height: 10rem;
+    padding: 0;   
+}
+.titulo{
+    margin-left: 17rem;
+}
+.descripcion{
+    width: 30rem;
+    padding-left: 2rem;
+}
+.nombre{
+    margin-top: 1rem;    
+    text-align: center;
+}
+.containerFicha{
+    margin-top: 40px;
+    height: 630px;
+
+}

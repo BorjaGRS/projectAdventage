@@ -1,0 +1,15 @@
+    .btn{
+    margin-left: 45%;
+    width: 100px;
+    }
+    legend{
+        text-align: center;
+    }
+    .row{
+        margin: 0;
+    }
+    .login{
+        margin-top: 50px;
+        padding-top: 100px;
+        height: 630px;
+    }

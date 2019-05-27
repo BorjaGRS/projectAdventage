@@ -1,0 +1,19 @@
+.centro{
+    border: solid 1px black;
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+.izq{
+    background-color: black;  
+    display: flex;
+    justify-content: center;
+}
+.der{
+    background-color: black;  
+    
+}
+.row{
+    margin: 0;
+}

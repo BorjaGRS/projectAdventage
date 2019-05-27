@@ -1,0 +1,14 @@
+<div class="row container" *ngIf="!verFichaProducto">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <h1 class="titulo">MIS PRODUCTOS</h1>
+        <div class="col-md-12 cajaProducto" *ngFor="let producto of misProductos" (click)='guardartemporalproducto(producto)'>
+            <img class="img" src="../../../assets/productos/{{producto.imagen}}">
+            <div class="descripcion"><p class="nombre">{{producto.nombre}}</p>{{producto.descripcion}}</div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<div class="col-12 containerFicha" *ngIf="verFichaProducto">
+    <app-ficha-producto></app-ficha-producto>
+</div>

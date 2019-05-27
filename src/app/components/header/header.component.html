@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="izq col-md-2">
+    <div class="dropdown show" *ngIf="!usuarioLogin">
+      <a class="btn btn-black text-white mt-3 dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Usuarios
+      </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="login">Iniciar Sesion</a>
+        <a class="dropdown-item" href="alta">Registro</a>
+        <a class="dropdown-item" href="#">Ayuda</a>
+      </div>
+    </div>
+    <div class="dropdown show" *ngIf="usuarioLogin">
+      <a class="btn btn-black text-white mt-3 dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{usuario}}
+      </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="perfil">Mi perfil</a>
+        <a class="dropdown-item" href="subir-producto">Subir Productos</a>
+        <a class="dropdown-item" href="mis-productos">Mis Productos</a>
+        <a class="dropdown-item" href="/" (click)="cerrarSesion()">Cerrar sesion</a>
+      </div>
+    </div>
+  </div>
+  <div class="centro col-md-6">
+    <a href="principal" class="btn btn-outline-danger my-2 my-sm-0 pt-5" role="button">Home</a>
+    <a href="categorias" class="btn btn-outline-danger my-2 my-sm-0 pt-5 mr-5" role="button">Categorias</a>
+    <img width="50" alt="Angular Logo"
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+    <h1 class="mt-2">ADVENTAGE</h1>
+    <img width="50" alt="Angular Logo"
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  </div>
+  <div class="der col-md-4">
+    <form class="form-inline mt-3" (submit)="addUser(newUser)">
+      <input class="form-control" type="search" placeholder="Search" aria-label="Search" #newUser>
+      <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</div>

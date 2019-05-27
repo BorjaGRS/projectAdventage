@@ -1,0 +1,19 @@
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6 ficha">
+    <div class="card">
+        <img class="img" src="../../../assets/productos/{{producto.imagen}}">
+        <h3 class="nombre">{{producto.nombre}}</h3>
+        <p class="precio">Precio: {{producto.precio}} Euros</p>
+        <p class="antig">Antiguedad: {{producto.antiguedad}}</p>
+        <p class="descr">{{producto.descripcion}}</p>
+        <p class="descubrir" *ngIf="!login">Para ver contacto tiene que estar logueado</p>
+        <div class="usuario" *ngIf="login">
+        <button *ngIf="miProducto" class="btn btn-danger" style="width: 6rem; height: 2rem;padding-top: 0.2rem;" (click)="deleteProducto()" onclick="location.href='/'">Eliminar</button>    
+        <p>{{vendedor.email}}</p>
+        <p>{{vendedor.nombre}}</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-3"></div>
+</div>

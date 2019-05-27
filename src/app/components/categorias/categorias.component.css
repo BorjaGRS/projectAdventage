@@ -1,0 +1,46 @@
+.catego{
+    margin-top: 40px;
+    height: 630px;
+}
+img{
+    width: 130px;
+    height: 130px;
+}
+.row{
+    margin: 20px;
+}
+.card{
+    cursor: pointer;
+}
+p{
+    color: brown;
+    font-size: 1.2em;
+}
+.producto{
+    display: flex;
+   justify-content: space-evenly;
+}
+.card-img-top{
+    height: 140px;
+    
+}
+.img{
+    width: 100%;
+}
+.texto{
+    color: black;
+    font-size: 1rem;
+}
+.categ{
+    margin-top: 40px;
+    height: 630px;
+    overflow-y: scroll;
+}
+.centro{
+    text-align: center;
+}
+.containerFicha{
+    margin-top: 40px;
+    height: 630px;
+
+}

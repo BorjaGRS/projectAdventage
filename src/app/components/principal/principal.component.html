@@ -1,0 +1,15 @@
+<div class="container" [ngClass]="{'container': estadoClase, 'containerFicha': !estadoClase}">
+    <div class="card-columns text-center" *ngIf="!verFichaProducto">
+        <div class="card" style="width: 14rem;" *ngFor="let producto of productos" (click)='guardartemporalproducto(producto)' (click)="cambiarClase()">
+            <img class="card-img-top" src="../../../assets/productos/{{producto.imagen}}" alt="Card image cap">
+            <div class="card-body">
+                <p class="font-weight-bold">{{producto.nombre}}</p>
+                <p class="font-weight-bold">{{producto.precio}} Euros</p>
+            </div>
+            <div class="card-footer" ><textarea type="textarea"rows="2" cols="15">{{producto.descripcion}}</textarea></div>
+        </div>
+    </div>
+    <div class="col-12" *ngIf="verFichaProducto">
+        <app-ficha-producto></app-ficha-producto>
+    </div>
+</div>
