@@ -13,7 +13,7 @@ export class PerfilComponent implements OnInit {
 
   usuario: Usuario;
 
-  constructor(private usuarioService: UsuarioService) { }
+  constructor(public usuarioService: UsuarioService) { }
 
   ngOnInit() {
     this.usuario = JSON.parse(localStorage.getItem("login"));
@@ -22,7 +22,6 @@ export class PerfilComponent implements OnInit {
 
 
   editarUsuario(form: NgForm){
-    console.log("hola");
     form.value._id = this.usuario._id;
     
     if(form.value.imagen === ""){
@@ -43,7 +42,6 @@ export class PerfilComponent implements OnInit {
     localStorage.clear();
     localStorage.setItem('login',JSON.stringify(form.value));
     this.usuarioService.putUsuario(form.value).subscribe((res)=>{
-      console.log(res);
     });
   }
 

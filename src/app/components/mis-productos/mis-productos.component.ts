@@ -14,7 +14,7 @@ export class MisProductosComponent implements OnInit {
   usuario: Usuario;
   verFichaProducto: boolean = false; 
   
-  constructor(private productoService: ProductoService) { }
+  constructor(public productoService: ProductoService) { }
   
   ngOnInit() {
       this.usuario = JSON.parse(localStorage.getItem("login"));
@@ -27,7 +27,6 @@ export class MisProductosComponent implements OnInit {
           this.misProductos.push(producto);
           }
         }
-        console.log(this.misProductos);
       });
   }
   guardartemporalproducto(producto): void{

@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   contrasena: string;
   usuarios: Usuario[];
 
-  constructor(private usuarioService: UsuarioService) { }
+  constructor(public usuarioService: UsuarioService) { }
 
   ngOnInit() {
 
@@ -26,12 +26,7 @@ export class LoginComponent implements OnInit {
       res => {
         this.usuarios = res as Usuario[];
         for (let user of this.usuarios) {
-          console.log(nombre);
-          console.log(contrasena);
-          console.log(user.nombre);
-          console.log(user.contrasena);
           if (user.nombre === nombre && user.contrasena === contrasena) {
-            console.log("bienvenido");
             localStorage.setItem('login', JSON.stringify(user));
             break;
           }

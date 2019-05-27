@@ -13,14 +13,13 @@ import { Usuario } from '../../models/usuario';
 export class SubirProductoComponent implements OnInit {
   usuario: Usuario = JSON.parse(localStorage.getItem("login"));
   productos: Producto[];
-  constructor(private productoService: ProductoService) { }
+  constructor(public productoService: ProductoService) { }
 
   ngOnInit() {
   }
 
   addProducto(form: NgForm){
     form.value.idVendedor = this.usuario._id;
-    console.log(form.value);
     this.productoService.postProducto(form.value).subscribe(res =>{
       this.sacarProductos();
     });

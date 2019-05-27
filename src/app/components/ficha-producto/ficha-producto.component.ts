@@ -17,9 +17,9 @@ export class FichaProductoComponent implements OnInit {
   vendedor: Usuario;
   miProducto: boolean = false;
   usuarioLogin: Usuario = JSON.parse(localStorage.getItem("login"));
-  constructor(private loginService: LoginService,
-              private usuarioService: UsuarioService,
-              private productoService: ProductoService) { }
+  constructor(public loginService: LoginService,
+              public usuarioService: UsuarioService,
+              public productoService: ProductoService) { }
 
   ngOnInit() {
     this.producto = JSON.parse(localStorage.getItem("producto"));

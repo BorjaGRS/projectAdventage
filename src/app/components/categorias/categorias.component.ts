@@ -13,7 +13,7 @@ export class CategoriasComponent implements OnInit {
   categoriaProductos: Producto[] = [];
   categoria: boolean = true;
   verFichaProducto:boolean = false;
-  constructor( private productoService: ProductoService) { }
+  constructor( public productoService: ProductoService) { }
 
   ngOnInit() {
     this.sacarProductos();

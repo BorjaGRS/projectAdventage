@@ -12,7 +12,7 @@ export class PrincipalComponent implements OnInit {
   productos: Producto[]; 
   verFichaProducto: boolean = false;
   estadoClase: boolean = true;
-  constructor(private productoService: ProductoService) { }
+  constructor(public productoService: ProductoService) { }
 
   ngOnInit() {
     this.sacarProductos();

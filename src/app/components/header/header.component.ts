@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
    usuarioLogin: boolean;
    usuario: string;
 
-  constructor(private loginService: LoginService) { }
+  constructor(public loginService: LoginService) { }
 
   ngOnInit() {
     this.usuarioLogin = this.loginService.getLogin();

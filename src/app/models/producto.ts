@@ -6,7 +6,7 @@ export class Producto {
     precio: string;
     antiguedad: string;
     tipo: string;
-    descipcion: string;
+    descripcion: string;
     idVendedor: string;
 
     constructor(id = "" ,imagen = "",nombre = "",precio= "",antiguedad = "",tipo = "", descripcion="", idVendedor=""){
@@ -17,7 +17,7 @@ export class Producto {
         this.precio = precio;
         this.antiguedad = antiguedad;
         this.tipo = tipo;
-        this.descipcion = descripcion;
+        this.descripcion = descripcion;
         this.idVendedor = idVendedor;
 
     }

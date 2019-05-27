@@ -11,7 +11,7 @@ import { Usuario } from 'src/app/models/usuario';
 })
 export class AltaComponent implements OnInit {
   cheked: boolean;
-  constructor(private usuarioService: UsuarioService) { }
+  constructor(public usuarioService: UsuarioService) { }
 
   ngOnInit() {
     this.getUsuario();
