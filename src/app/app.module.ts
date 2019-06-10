@@ -15,7 +15,6 @@ import { SubirProductoComponent } from './components/subir-producto/subir-produc
 import { PrincipalComponent } from './components/principal/principal.component';
 import { FichaProductoComponent } from './components/ficha-producto/ficha-producto.component';
 import { MisProductosComponent } from './components/mis-productos/mis-productos.component';
-import { CatalogoComponent } from './components/catalogo/catalogo.component';
 
 const routes: Route[] = [
   {path: 'mis-productos', component:MisProductosComponent},
@@ -41,8 +40,7 @@ const routes: Route[] = [
     SubirProductoComponent,
     PrincipalComponent,
     FichaProductoComponent,
-    MisProductosComponent,
-    CatalogoComponent
+    MisProductosComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from '../../services/login.service';
-import { Router } from '@angular/router'
 import { UsuarioService } from '../../services/usuario.service';
 import { Usuario } from '../../models/usuario';
 
@@ -10,10 +8,8 @@ import { Usuario } from '../../models/usuario';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  nombre: string;
-  contrasena: string;
   usuarios: Usuario[];
-
+  user: Usuario;
   constructor(public usuarioService: UsuarioService) { }
 
   ngOnInit() {
@@ -21,19 +17,14 @@ export class LoginComponent implements OnInit {
   }
 
   logIn(nombre: string, contrasena: string): void {
-
     this.usuarioService.getUsuarios().subscribe(
-      res => {
+    res => {
         this.usuarios = res as Usuario[];
-        for (let user of this.usuarios) {
-          if (user.nombre === nombre && user.contrasena === contrasena) {
-            localStorage.setItem('login', JSON.stringify(user));
-            break;
-          }
+        this.user =  this.usuarios.find( x => x.nombre === nombre && x.contrasena === contrasena);
+        if(this.user){
+          localStorage.setItem('login', JSON.stringify(this.user));
         }
       }
     );
-
   }
-
 }

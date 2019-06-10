@@ -11,16 +11,16 @@ usuariosContr.getUsuario = async (req, res ) => {
 
 usuariosContr.createUsuario = async (req, res, next) => {
 
-        const usuario = new usuarios({
-            imagen: req.body.imagen,
-            nombre: req.body.nombre,
-            contrasena: req.body.contrasena,
-            email: req.body.email,
-            provincia: req.body.provincia
-        });
-        await usuario.save();
-        res.json({status: 'Usuario creado'});
-    }
+    const usuario = new usuarios({
+        imagen: req.body.imagen,
+         nombre: req.body.nombre,
+        contrasena: req.body.contrasena,
+         email: req.body.email,
+         provincia: req.body.provincia
+    });
+    await usuario.save();
+    res.json({status: 'Usuario creado'});
+}
 
 
 usuariosContr.updateUsuario = async (req, res) => {
@@ -32,15 +32,13 @@ usuariosContr.updateUsuario = async (req, res) => {
         email: req.body.email,
         provincia: req.body.provincia
     }
-
-
     await usuarios.findByIdAndUpdate(id, {$set: usuario}, {new: true});
-    res.json({status: 'Usuario actualizado'})
+    res.json({status: 'Usuario actualizado'});
 }
 
 usuariosContr.deleteUsuario = async (req, res) => {
     await usuarios.findByIdAndRemove(req.params.id);
-    res.json({status:'usuario borrado'})
+    res.json({status:'usuario borrado'});
 }
 
 module.exports = usuariosContr;

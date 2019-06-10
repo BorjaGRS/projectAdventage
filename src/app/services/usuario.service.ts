@@ -17,7 +17,6 @@ export class UsuarioService {
   getUsuarios(){
     return this.http.get(this.urlApi);
   }
-
   postUsuarios(usuario: Usuario){
     return this.http.post(this.urlApi, usuario);
   }
