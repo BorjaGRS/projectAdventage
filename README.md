@@ -1,4 +1,4 @@
-Proyecto final, grado superior Desarrollo web.
+Proyecto final, grado superior Desarrollo web. Mercadillo virtual
 
 
 # Adventage
