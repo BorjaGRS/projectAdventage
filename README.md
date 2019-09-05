@@ -1,4 +1,6 @@
-Proyecto final, grado superior Desarrollo web. Mercadillo virtual
+Proyecto final de grado 
+Grado superior Desarrollo web. Mercadillo virtual
+Angular, MongoDB ...
 
 
 # Adventage
